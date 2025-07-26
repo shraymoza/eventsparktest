@@ -32,7 +32,8 @@ function App() {
     if (token) {
       axios
         .get(`${process.env.REACT_APP_API_URL}/api/auth/me`, {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: { Authorization: `Bearer ${token}`
+          },
         })
         .then((res) => {
           setUser(res.data.data.user);
